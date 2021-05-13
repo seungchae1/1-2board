@@ -22,7 +22,7 @@ void main(void)
 	
 	srand(time(0));
 	rand();
-	dice = rand();
+	dice = rand() % 6 + 1;
 
 	printf("%d\n", dice);
 
