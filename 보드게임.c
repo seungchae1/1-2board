@@ -29,24 +29,16 @@ void main(void)
 	printf("현재위치 : %d\n\n", position);
 	getchar();
 
-	//주사위 던지기(1~6)
-	dice = rand() % 6 + 1;
-	printf("주사위 값 : %d ", dice);
-	position += dice;
-	printf("현재위치 : %d\n", position);
-	getchar();
+	while (1) 
+	{
+		//주사위 던지기(1~6)
+		dice = rand() % 6 + 1;
+		printf("주사위 값 : %d ", dice);
+		position += dice;
+		printf("현재위치 : %d\n", position);
+		getchar();
+	}
 
-	dice = rand() % 6 + 1;
-	printf("주사위 값 : %d ", dice);
-	position += dice;
-	printf("현재위치 : %d\n", position);
-	getchar();
 	
-	dice = rand() % 6 + 1;
-	printf("주사위 값 : %d ", dice);
-	position += dice;
-	printf("현재위치 : %d\n", position);
-	getchar();
-
 
 }
