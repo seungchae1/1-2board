@@ -5,6 +5,7 @@
 - 위치 정보(말) : 0부터 시작
 - 돈 : 5,000,000 부터 시작
 - 아이템 인벤토리 (나중에 가능하면)
+3.파산 기준 : 0원
 */
 
 #include <stdio.h>
@@ -45,11 +46,16 @@ void main(void)
 			position = 3;
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 		}
-
+		
 		if (position == 15) {
 			printf("주식이 떨어져 200만원이 차감됩니다.\n");
 			money -= 2000000;
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
+		}
+		//파산처리
+		if (money <= 0) {
+			printf("파산하셨습니다...ㅠㅠㅠ\n");
+			break;
 		}
 
 		if (position > 61) {
