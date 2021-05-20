@@ -40,9 +40,10 @@ void main(void)
 
 		if (position > 61) {
 			printf("축하합니다!! 목적지에 도달하였습니다.\n");
+			break;
 		}
-	}
-
+	}//while문 끝
+	printf("게임이 끝났습니다.");
 	
 
 }
