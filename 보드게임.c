@@ -23,7 +23,7 @@ void main(void)
 	//주사위
 	int dice;
 
-	int money = 50000000;
+	int money = 5000000;
 	
 	srand(time(0));
 	rand();
@@ -39,9 +39,16 @@ void main(void)
 		printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
 		printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 
+		//7번에 있을때 3번으로 이동
 		if (position == 7) {
 			printf("3번 위치로 이동합니다.\n");
 			position = 3;
+			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
+		}
+
+		if (position == 15) {
+			printf("주식이 떨어져 200만원이 차감됩니다.\n");
+			money -= 2000000;
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 		}
 
