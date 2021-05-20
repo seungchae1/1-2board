@@ -27,16 +27,15 @@ void main(void)
 	rand();
 
 	printf("현재위치 : %d\n\n", position);
-	getchar();
 
 	while (1) 
 	{
+		getchar(); //주사위를 던지기 위해서는 엔터키를 눌러야 한다.
 		//주사위 던지기(1~6)
 		dice = rand() % 6 + 1;
 		printf("주사위 값 : %d ", dice);
 		position += dice;
 		printf("현재위치 : %d\n", position);
-		getchar();
 
 		if (position > 61) {
 			printf("축하합니다!! 목적지에 도달하였습니다.\n");
