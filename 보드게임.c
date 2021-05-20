@@ -22,6 +22,8 @@ void main(void)
 
 	//주사위
 	int dice;
+
+	int money = 50000000;
 	
 	srand(time(0));
 	rand();
@@ -33,9 +35,9 @@ void main(void)
 		getchar(); //주사위를 던지기 위해서는 엔터키를 눌러야 한다.
 		//주사위 던지기(1~6)
 		dice = rand() % 6 + 1;
-		printf("주사위 값 : %d ", dice);
 		position += dice;
-		printf("현재위치 : %d\n", position);
+		printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
+		printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 
 		if (position > 61) {
 			printf("축하합니다!! 목적지에 도달하였습니다.\n");
