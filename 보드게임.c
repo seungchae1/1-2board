@@ -6,6 +6,7 @@
 - 돈 : 5,000,000 부터 시작
 - 아이템 인벤토리 (나중에 가능하면)
 3.파산 기준 : 0원
+4. 완려 조건 : 말이 61에 있어야 한다. 넘어가면X
 */
 
 #include <stdio.h>
@@ -59,12 +60,12 @@ void main(void)
 		}
 		
 		//61 위치에만 있어야 게임을 끝낸다. 
-		if (position == 61) {
+		if (position == MAX_LENGTH) {
 			printf("축하합니다!! 목적지에 도달하였습니다.\n");
 			break;
 		}
 
-		if (position > 61) {
+		if (position > MAX_LENGTH) {
 			printf("목적지를 넘어섰습니다. 바로 전 위치로 이동합니다.\n");
 				position -=dice;
 				printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
