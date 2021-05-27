@@ -15,8 +15,8 @@
 
 void main(void)
 {
-	//칸의 최대갯수
-	int max_length = 61;
+	//칸의 최대갯수 (상수형 변수[공간]) 
+	const int MAX_LENGTH = 61;
 	
 	//플레이어의 위치
 	int position = 0;
@@ -56,6 +56,10 @@ void main(void)
 		if (money <= 0) {
 			printf("파산하셨습니다...ㅠㅠㅠ\n");
 			break;
+		}
+
+		if (position == 20) {
+			money *= 0.2;
 		}
 
 		if (position > 61) {
