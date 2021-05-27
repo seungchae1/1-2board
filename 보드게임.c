@@ -6,7 +6,7 @@
 - 돈 : 5,000,000 부터 시작
 - 아이템 인벤토리 (나중에 가능하면)
 3.파산 기준 : 0원
-4. 완려 조건 : 말이 61에 있어야 한다. 넘어가면X
+4. 완료 조건 : 말이 61에 있어야 한다. 넘어가면X
 */
 
 #include <stdio.h>
@@ -57,6 +57,13 @@ void main(void)
 		if (money <= 0) {
 			printf("파산하셨습니다...ㅠㅠㅠ\n");
 			break;
+		}
+
+		if (position == 20) {
+			printf("재산의 20%를 사회에 기부합니다.\n");
+			//money = money - money * 0.2;
+			money *= 0.8;
+			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 		}
 		
 		//61 위치에만 있어야 게임을 끝낸다. 
