@@ -57,14 +57,17 @@ void main(void)
 			printf("파산하셨습니다...ㅠㅠㅠ\n");
 			break;
 		}
-
-		if (position == 20) {
-			money *= 0.2;
+		
+		//61 위치에만 있어야 게임을 끝낸다. 
+		if (position == 61) {
+			printf("축하합니다!! 목적지에 도달하였습니다.\n");
+			break;
 		}
 
 		if (position > 61) {
-			printf("축하합니다!! 목적지에 도달하였습니다.\n");
-			break;
+			printf("목적지를 넘어섰습니다. 바로 전 위치로 이동합니다.\n");
+				position -=dice;
+				printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 		}
 	}//while문 끝
 	printf("게임이 끝났습니다.");
