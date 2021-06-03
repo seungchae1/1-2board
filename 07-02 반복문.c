@@ -3,13 +3,14 @@
 void main(void)
 {
 	int num = 0;
-	while(1)
+
+	while(num !=5)
 	{
-		if (num == 5)
+		/*if (num == 5)
 		{
 			break;
-		}
-		printf("무한으로 즐겨\n");
+		}*/
+		printf("유한으로 즐겨\n");
 		num++;
 	}
 }
