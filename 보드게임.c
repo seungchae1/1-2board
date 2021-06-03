@@ -41,7 +41,27 @@ void main(void)
 		printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
 		printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 
+		//test code
+		//position = 20;
+
 		//7번에 있을때 3번으로 이동
+		switch (position)
+		{
+		case 7: printf("3번 위치로 이동합니다.\n");
+				position = 3;
+				printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
+				break;
+		case 15: printf("주식이 떨어져 200만원이 차감됩니다.\n");
+				money -= 2000000;
+				printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
+				break;
+		case 20:printf("재산의 20%%를 사회에 기부합니다.\n");
+				//money = money - money * 0.2;
+				money *= 0.8;
+				printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
+				break;
+		}
+		/*
 		if (position == 7) {
 			printf("3번 위치로 이동합니다.\n");
 			position = 3;
@@ -52,19 +72,19 @@ void main(void)
 			printf("주식이 떨어져 200만원이 차감됩니다.\n");
 			money -= 2000000;
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
-		}
+		}*/
 		//파산처리
 		if (money <= 0) {
 			printf("파산하셨습니다...ㅠㅠㅠ\n");
 			break;
 		}
-
+		/*
 		if (position == 20) {
 			printf("재산의 20%%를 사회에 기부합니다.\n");
 			//money = money - money * 0.2;
 			money *= 0.8;
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
-		}
+		}*/
 		
 		//61 위치에만 있어야 게임을 끝낸다. 
 		if (position == MAX_LENGTH) {
