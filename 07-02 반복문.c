@@ -4,7 +4,7 @@ void main(void)
 {
 	int num = 0;
 
-	while(num !=5)
+	while(num < 5)
 	{
 		/*if (num == 5)
 		{
