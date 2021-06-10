@@ -42,7 +42,7 @@ void main(void)
 		printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 
 		//test code
-		//position = 20;
+		//position = 52;
 
 		//7번에 있을때 3번으로 이동
 		switch (position)
@@ -55,36 +55,25 @@ void main(void)
 				money -= 2000000;
 				printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 				break;
-		case 20:printf("재산의 20%%를 사회에 기부합니다.\n");
+		case 20: printf("재산의 20%%를 사회에 기부합니다.\n");
 				//money = money - money * 0.2;
 				money *= 0.8;
 				printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 				break;
-		}
-		/*
-		if (position == 7) {
-			printf("3번 위치로 이동합니다.\n");
-			position = 3;
+		case 52: printf("위치 52 무인도에 갇혔습니다.\n");
+			for (int i = 1; i <= 3; i++)
+			{
+				getchar();
+				printf("%d번째 입니다.\n",i);
+			}
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 		}
 		
-		if (position == 15) {
-			printf("주식이 떨어져 200만원이 차감됩니다.\n");
-			money -= 2000000;
-			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
-		}*/
 		//파산처리
 		if (money <= 0) {
 			printf("파산하셨습니다...ㅠㅠㅠ\n");
 			break;
 		}
-		/*
-		if (position == 20) {
-			printf("재산의 20%%를 사회에 기부합니다.\n");
-			//money = money - money * 0.2;
-			money *= 0.8;
-			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
-		}*/
 		
 		//61 위치에만 있어야 게임을 끝낸다. 
 		if (position == MAX_LENGTH) {
