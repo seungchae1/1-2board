@@ -5,9 +5,10 @@ void main(void)
 	/*for (int i = 1; i < 10; i++) {
 		printf("2 X %d = %d\n", i, 2 * i);
 	} */
+	int dan = 2;
 	int i = 1;
 	while (i < 10) {
-		printf("2 X %d = %d\n", i, 2 * i);
+		printf("%d X %d = %d\n",dan, i, dan * i);
 		i++;
 	}
 	/*
