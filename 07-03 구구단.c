@@ -2,13 +2,7 @@
 
 void main(void)
 {
-
-	/*for (int dan = 2; dan <= 9; dan++) {
-		for (int i = 1; i <= 9; i++) {
-			printf("%d X %d =%d\n", dan, i, dan * i);
-		}
-		printf("\n");*/
-	int dan=2;
+	/*int dan=2;
 	int i=1;
 	while(dan<=9)
 	{
@@ -20,5 +14,13 @@ void main(void)
 		i = 1;
 		dan++;
 		printf("\n");
+	}*/
+	for (int i = 2; i <= 9; i++)
+	{
+		for (int j = 1; j <= 9; j++)
+		{
+			printf("%d X %d = %d\n", i, j, i * j);
+		}
+		printf("================\n");
 	}
 }
