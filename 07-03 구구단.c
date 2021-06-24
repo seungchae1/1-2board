@@ -25,7 +25,7 @@ void main(void)
 		{
 			if (j == 5)
 			{
-				break; //안 쪽 for문을 벗어난다.
+				continue; //안 쪽 for문을 한 턴 쉰다.
 			}
 			printf("%d X %d = %d\n", i, j, i * j);
 		}
