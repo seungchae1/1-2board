@@ -1,6 +1,6 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
-// ÇÔ¼öÀÇ ¼±¾ğ(declaration)
+// í•¨ìˆ˜ì˜ ì„ ì–¸(declaration)
 int sum(int a, int b);
 int sum2(int a, int b);
 
@@ -12,7 +12,7 @@ void main(void)
 	printf("%d", aaaaa);
 }
 
-// ÇÔ¼öÀÇ Á¤ÀÇ(definition)
+// í•¨ìˆ˜ì˜ ì •ì˜(definition)
 int sum(int a, int b)
 {
 	return sum2(a, b);
