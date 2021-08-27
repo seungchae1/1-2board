@@ -2,7 +2,7 @@
 
 void main(void)
 {
-	int arr[5] = { 10, 20, 30, 40 , 50};
+	int arr[4] = { 10, 20, 30, 40};
 
 	//배열의 시작주소값을 의미
 	printf("%p\n", arr);
