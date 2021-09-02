@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 void cal_grade(int score);
+double cal_average(int c_score, int j_score, int ca_score);
 
 void main(void)
 {
@@ -18,12 +19,23 @@ void main(void)
 	printf("컴퓨터구조점수를 입력하세요. : ");
 	scanf("%d", &CA_score);
 	cal_grade(CA_score);
+
+	double score_aver=cal_average(C_score, java_score, CA_score);
+	printf("세 과목의 평균은 %f입니다.", score_aver);
 }
 
-void cal_grade(int score){
+// 입력받은 점수(score)에 대한 등급을 출력
+void cal_grade(int score)
+{
 	if (score <= 100 && score >= 90) printf("A입니다.\n");
 	else if (score >= 80) printf("B입니다.\n");
 	else if (score >= 70) printf("C입니다.\n");
 	else if (score >= 60) printf("D입니다.\n");
 	else printf("E입니다.\n");
+}
+
+//세 과목의 평균을 반환
+double cal_average(int c_score, int j_score, int ca_score)
+{
+	return (double)(c_score + j_score + ca_score) / (double)3;
 }
