@@ -5,22 +5,21 @@ double cal_average(int c_score, int j_score, int ca_score);
 
 void main(void)
 {
-	int C_score;
+	int score[3];
+
 	printf("C점수를 입력하세요. : ");
-	scanf("%d", &C_score);
-	cal_grade(C_score);
+	scanf("%d", &score[0]);
+	cal_grade(score[0]);
 
-	int java_score;
 	printf("java점수를 입력하세요. : ");
-	scanf("%d", &java_score);
-	cal_grade(java_score);
+	scanf("%d", &score[1]);
+	cal_grade(score[1]);
 
-	int CA_score;
 	printf("컴퓨터구조점수를 입력하세요. : ");
-	scanf("%d", &CA_score);
-	cal_grade(CA_score);
+	scanf("%d", &score[2]);
+	cal_grade(score[2]);
 
-	double score_aver=cal_average(C_score, java_score, CA_score);
+	double score_aver=cal_average(score[0].score[1], score[2]);
 	printf("세 과목의 평균은 %f입니다.", score_aver);
 }
 
