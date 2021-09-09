@@ -1,10 +1,10 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 void main(void)
 {
 	char str[12] = "Hello World";
 	
-	//null¹®ÀÚ('\0')°¡ ¾Æ´Ò ¶§ Ãâ·Â
+	//nullë¬¸ì('\0')ê°€ ì•„ë‹ ë•Œ ì¶œë ¥
 	for (int i = 0; str[i] != '\0'; i++)
 	{
 		printf("%c", str[i]);
