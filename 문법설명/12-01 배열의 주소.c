@@ -9,7 +9,8 @@ void main(void)
 	printf("arr	: %p\n", arr);
 
 	//1번째 공간의 주소
-	printf("&arr[1] : %p\n \n", &arr[1]);
+	printf("&arr[1] : %p\n", &arr[1]);
+	printf("arr+1 : %p\n \n", arr+1);
 
 	char str[4];
 	//0번째 공간의 주소
@@ -18,4 +19,5 @@ void main(void)
 
 	//1번째 공간의 주소
 	printf("&str[1] : %p\n", &str[1]);
+	printf("str+1 : %p\n", str+1);
 }
