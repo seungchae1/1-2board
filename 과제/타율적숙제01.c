@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 //매개변수 a는 입력받은 번호num, m은 금액의 메모리주소값을 받는다.
-void order(int a, int* m);
+void order(int num, int* money);
 
 void main(void)
 {
@@ -28,29 +28,27 @@ void main(void)
 	}
 }
 
-void order(int a, int* m)
+void order(int num, int* money)
 {
-	if (a == 1)
-	{
-		*m -= 700;
-		printf("코카콜라가 나왔습니다.\n");
-	}
-	else if(a==2) 
-	{
-		*m -= 600;
-		printf("써니텐이 나왔습니다.\n");
-	}
-	else if(a==3) 
-	{
-		*m -= 800;
-		printf("포카리스웨트가 나왔습니다.\n");
-	}
-	else
-	{
-		printf("1,2,3 중에서 고르세요\n");
+	switch (num) {
+	case 1:
+		*money -= 700;
+		printf("\n코카콜라가 나왔습니다.\n");
+		break;
+	case 2:
+		*money -= 600;
+		printf("\n써니텐이 나왔습니다.\n");
+		break;
+	case 3:
+		*money -= 800;
+		printf("\n포카리스웨트가 나왔습니다.\n");
+		break;
+
+	default:
+		printf("\n1,2,3 중에서 고르세요\n");
 		printf("구매할 물건의 버튼을 입력하시오.");
-		scanf_s("%d", &a);
+		scanf_s("%d", &num);
 		printf("\n");
-		order(a, m); //함수 다시 호출
+		order(num, money); //함수 다시 호출
 	}
 }
