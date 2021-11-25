@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void main(void) {
 	//지역변수에 할당된 배열(stack영역에 할당)
