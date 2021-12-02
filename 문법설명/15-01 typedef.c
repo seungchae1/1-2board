@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+typedef int* p_int; //자료형 별칭
+
+void main(void)
+{
+	int num = 3;
+	//int* ptr = &num;
+	p_int ptr = &num;
+	
+	*ptr = 4;
+	printf("%d \n", num);
+}
