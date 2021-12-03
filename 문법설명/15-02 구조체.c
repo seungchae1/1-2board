@@ -17,4 +17,5 @@ void main(void)
 
 	printf("(%d, %d) \n", p1.x, p1.y);
 	printf("(%d, %d) \n", p2.x, p2.y);
+	printf("구조체의 크기는 %d", sizeof(p1));
 }
