@@ -1,9 +1,10 @@
 #include <stdio.h>
+typedef struct point Point;
 
 typedef struct point { //8byte => int가 두개여서
 	int x;
 	int y;
-}Point;
+};
 
 void main(void)
 {
